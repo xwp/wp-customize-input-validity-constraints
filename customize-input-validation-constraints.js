@@ -1,5 +1,6 @@
 /* exported CustomizeInputValidityConstraints */
-/* eslint complexity: ["error", 8] */
+/* eslint complexity: ["error", 6] */
+/* eslint no-magic-numbers: ["error", {"ignore":[0,1]}] */
 
 var CustomizeInputValidityConstraints = (function( $ ) {
 	'use strict';
@@ -60,12 +61,12 @@ var CustomizeInputValidityConstraints = (function( $ ) {
 			update = this.update;
 			refresh = this.refresh;
 
-			this.update = function ( to ) {
+			this.update = function( to ) {
 				if ( to !== refresh.call( self ) ) {
 					update.apply( this, arguments );
 				}
 			};
-			this.refresh = function () {
+			this.refresh = function() {
 				self.set( refresh.call( self ) );
 			};
 
@@ -96,8 +97,10 @@ var CustomizeInputValidityConstraints = (function( $ ) {
 					if ( input.reportValidity ) {
 						input.reportValidity();
 					}
-				} catch( e ){}
-			}, 250 ) );
+				} catch ( e ) {
+					return;
+				}
+			}, component.api.settings.timeouts.windowRefresh ) );
 		} );
 	};
 

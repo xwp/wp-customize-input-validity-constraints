@@ -13,7 +13,13 @@ Enforce HTML5 validity constraints via setting validation by looking at associat
 
 This is a feature plugin intended to implement [#38845](https://core.trac.wordpress.org/ticket/38845): Implement HTML5 input validity constraints in customizer settings.
 
-**Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-input-validity-constraints). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-input-validity-constraints/issues) reported there before going to the [plugin forum](https://wordpress.org/support/plugin/customizer-browser-history).**
+Activate the bundled “Customize Input Validity Constraints Examples” plugin to see the functionality in action.
+
+**Development of this plugin is done [on GitHub](https://github.com/xwp/wp-customize-input-validity-constraints). Pull requests welcome. Please see [issues](https://github.com/xwp/wp-customize-input-validity-constraints/issues) reported.**
+
+== Screenshots ==
+
+1. Server-side and client-side validation is performed.
 
 == Changelog ==
 

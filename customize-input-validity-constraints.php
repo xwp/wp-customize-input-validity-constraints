@@ -27,8 +27,6 @@
  * @package Customize_Input_Validity_Constraints
  */
 
-// @todo It is somewhat backwards to define the validation schema on the *control* rather than on the settings. There should be the equivalent of input_attrs on WP_Customize_Setting, like validation_constraints.
-
 namespace Customize_Input_Validity_Constraints;
 
 /**
@@ -90,7 +88,7 @@ function validate_time( $args ) {
  *
  * @param \WP_Error             $validity Validity.
  * @param mixed                 $value    Value.
- * @param \WP_Customize_Setting $setting
+ * @param \WP_Customize_Setting $setting  Setting.
  * @return \WP_Error Validity.
  */
 function validate_input_constraints( \WP_Error $validity, $value, \WP_Customize_Setting $setting ) {
@@ -125,9 +123,9 @@ function validate_input_constraints( \WP_Error $validity, $value, \WP_Customize_
 	if ( in_array( 'number', $input_types, true ) ) {
 		if ( ! is_numeric( $value ) ) {
 			$validity->add( 'typeMismatch', __( 'Not a number.', 'customize-input-validity-constraints' ) );
-		} else if ( ! empty( $input_attrs['min'] ) && $value < $input_attrs['min'] ) {
+		} elseif ( ! empty( $input_attrs['min'] ) && $value < $input_attrs['min'] ) {
 			$validity->add( 'rangeUnderflow', __( 'Number too small.', 'customize-input-validity-constraints' ) );
-		} else if ( ! empty( $input_attrs['max'] ) && $value > $input_attrs['max'] ) {
+		} elseif ( ! empty( $input_attrs['max'] ) && $value > $input_attrs['max'] ) {
 			$validity->add( 'rangeOverflow', __( 'Number too large.', 'customize-input-validity-constraints' ) );
 		} else {
 			$numerical_value = doubleval( $value );

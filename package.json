@@ -1,0 +1,19 @@
+{
+  "name": "customize-input-validity-constraints",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xwp/wp-customize-input-validity-constraints.git"
+  },
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/xwp/wp-customize-input-validity-constraints/issues"
+  },
+  "homepage": "https://github.com/xwp/wp-customize-input-validity-constraints#readme",
+  "devDependencies": {
+    "eslint": "^3.10.2"
+  }
+}
