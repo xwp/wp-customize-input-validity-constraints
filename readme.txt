@@ -11,7 +11,7 @@ Enforce HTML5 validity constraints via setting validation by looking at associat
 
 == Description ==
 
-This is a feature plugin intended to implement [#38845](https://core.trac.wordpress.org/ticket/38845): Implement HTML5 input validity constraints in customizer settings.
+This is a feature plugin intended to implement [#38845](https://core.trac.wordpress.org/ticket/38845): Implement HTML5 input validity constraints in customizer settings. Read the writeup in the [ticket description](https://core.trac.wordpress.org/ticket/38845#comment:description).
 
 Activate the bundled “Customize Input Validity Constraints Examples” plugin to see the functionality in action.
 
