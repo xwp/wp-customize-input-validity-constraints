@@ -2,11 +2,11 @@
 /**
  * Plugin Name: Customize Input Validity Constraints
  * Version: 0.1.0
- * Description: Enforce HTML5 validity constraints via setting validation by looking at associated controls and their type and input_attrs.
+ * Description: Enforce HTML5 validity constraints via setting validation by looking at associated controls and their type and input_attrs. Feature plugin for <a href="https://core.trac.wordpress.org/ticket/38845">#38845</a>.
  * Author: Weston Ruter, XWP
  * Author URI: https://make.xwp.co/
  * Domain Path: /languages
- * Plugin URI: https://github.com/xwp/wp-customizer-browser-history
+ * Plugin URI: https://github.com/xwp/wp-customize-input-validity-constraints
  *
  * Copyright (c) 2016 XWP (https://make.xwp.co/)
  *
@@ -24,9 +24,8 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
- * @package CustomizerBrowserHistory
+ * @package Customize_Input_Validity_Constraints
  */
-
 
 // @todo It is somewhat backwards to define the validation schema on the *control* rather than on the settings. There should be the equivalent of input_attrs on WP_Customize_Setting, like validation_constraints.
 
