@@ -1,5 +1,5 @@
 /* exported CustomizeInputValidityConstraints */
-/* eslint complexity: ["error", 6] */
+/* eslint complexity: ["error", 7] */
 /* eslint no-magic-numbers: ["error", {"ignore":[0,1]}] */
 
 var CustomizeInputValidityConstraints = (function( $ ) {

@@ -234,8 +234,8 @@ function validate_input_constraints( \WP_Error $validity, $value, \WP_Customize_
  * Enqueue scripts for controls.
  */
 function customize_controls_enqueue_scripts() {
-	$handle = 'customize-input-validation-constraints';
-	$src = plugin_dir_url( __FILE__ ) . 'customize-input-validation-constraints.js';
+	$handle = 'customize-input-validity-constraints';
+	$src = plugin_dir_url( __FILE__ ) . 'customize-input-validity-constraints.js';
 	$deps = array( 'customize-controls' );
 	wp_enqueue_script( $handle, $src, $deps );
 
