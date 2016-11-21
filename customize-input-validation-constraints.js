@@ -44,7 +44,11 @@ var CustomizeInputValidityConstraints = (function( $ ) {
 			this.events = '';
 
 			if ( this.element.is( 'input, select, textarea' ) ) {
-				this.events += 'input';
+				if ( 'radio' === this.element.prop( 'type' ) || 'checkbox' === this.element.prop( 'type' ) ) {
+					this.events += 'change';
+				} else {
+					this.events += 'input';
+				}
 				synchronizer = api.Element.synchronizer.val;
 
 				if ( this.element.is( 'input' ) ) {
