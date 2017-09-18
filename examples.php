@@ -57,5 +57,21 @@ function customize_register( \WP_Customize_Manager $wp_customize ) {
 			'step' => '0.5',
 		),
 	) );
+
+	$wp_customize->add_setting( 'test_url', array(
+		'type' => 'demo',
+	) );
+	$wp_customize->add_control( 'test_url', array(
+		'type' => 'url',
+		'section' => 'input_validity_constraints',
+		'label' => 'URL input',
+		'description' => 'Must be a valid URL and include "example".',
+		'settings' => array(
+			'default' => 'test_url',
+		),
+		'input_attrs' => array(
+			'pattern' => '.*example.*',
+		),
+	) );
 }
 add_action( 'customize_register', __NAMESPACE__ . '\customize_register' );
