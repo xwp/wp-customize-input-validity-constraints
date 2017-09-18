@@ -1,6 +1,6 @@
 /* exported CustomizeInputValidityConstraints */
 /* eslint complexity: ["error", 7] */
-/* eslint no-magic-numbers: ["error", {"ignore":[0,1]}] */
+/* eslint no-magic-numbers: ["error", {"ignore":[-1,0,1]}] */
 
 var CustomizeInputValidityConstraints = (function( $ ) {
 	'use strict';
@@ -29,6 +29,11 @@ var CustomizeInputValidityConstraints = (function( $ ) {
 	 */
 	component.overrideElementInitialize = function overrideElementInitialize() {
 		var api = component.api;
+
+		// Short circuit when <https://core.trac.wordpress.org/changeset/41387> has is present (in 4.9-alpha).
+		if ( -1 === component.api.Element.prototype.initialize.toString().indexOf( 'propertychange' ) ) {
+			return;
+		}
 
 		/*
 		 * The following is forked from core at https://github.com/xwp/wordpress-develop/blob/bbd3e0174edaa0b855a2f3af044ca2272d9c7a2a/src/wp-includes/js/customize-base.js#L528-L571
